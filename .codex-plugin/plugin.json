@@ -1,0 +1,34 @@
+{
+  "name": "nuticast",
+  "version": "1.0.0",
+  "description": "Get an iPhone on another network ready for Xcode from a conversation: list or add saved devices, start or stop a Nuticast bridge over your Tailscale, ZeroTier or Netbird network, and hand Xcode the device id to build and debug on.",
+  "author": {
+    "name": "Nuticast",
+    "url": "https://www.nuticast.com"
+  },
+  "homepage": "https://www.nuticast.com",
+  "repository": "https://github.com/webwarrior06/nuticast-codex-plugin",
+  "license": "MIT",
+  "keywords": ["xcode", "ios", "iphone", "remote-debugging", "tailscale", "zerotier", "netbird", "devicectl"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Nuticast",
+    "shortDescription": "Debug remote iPhones in Xcode",
+    "longDescription": "Nuticast makes an iPhone on another Wi-Fi show up in Xcode as a wireless debug device, over your own Tailscale, ZeroTier or Netbird network. This plugin lets Codex do the setup steps for you. Ask it to run the tests on your iPhone and it can list your saved devices, add the phone if none is saved yet, start the bridge, wait until Xcode sees the phone, and build against the device with the right xcodebuild destination.\n\nRequirements: a Mac with the Nuticast app installed in /Applications, a Nuticast license, an iPhone saved in Nuticast, and a mesh VPN on both devices. The plugin starts the nuticast command that ships inside the app, so it works only in Codex running on that Mac, not in the cloud or on mobile.\n\nIt cannot delete devices, activate or deactivate a license, or install apps. Codex never sees your license key: you activate it yourself in Terminal, with hidden input.",
+    "developerName": "Nuticast",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.nuticast.com",
+    "privacyPolicyURL": "https://www.nuticast.com/privacy",
+    "termsOfServiceURL": "https://www.nuticast.com/terms",
+    "defaultPrompt": [
+      "Run the tests on my iPhone using Nuticast.",
+      "Get my iPhone ready for Xcode with Nuticast.",
+      "Add my iPhone to Nuticast over Tailscale."
+    ],
+    "brandColor": "#1473E6",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}

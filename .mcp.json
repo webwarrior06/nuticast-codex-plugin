@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "nuticast": {
+      "command": "/Applications/Nuticast.app/Contents/Helpers/nuticast",
+      "args": ["mcp"],
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 300
+    }
+  }
+}
